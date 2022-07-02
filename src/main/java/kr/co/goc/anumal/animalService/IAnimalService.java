@@ -1,12 +1,11 @@
-package kr.co.goc.anumal.animalDAO;
+package kr.co.goc.anumal.animalService;
 
 import java.util.List;
 
 import kr.co.goc.anumal.animalVO.AnimalVO;
 import kr.co.goc.anumal.animalVO.ContentVO;
 
-public interface IAnimalDAO {
-	
+public interface IAnimalService {
 	public int insertUserInfo(AnimalVO av,ContentVO cv);
 	public int updateUserInfo(AnimalVO av,ContentVO cv);
 	public int deleteUserInfo(String phoneNum, String password);

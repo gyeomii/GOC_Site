@@ -1,21 +1,25 @@
-package kr.co.goc.anumal.animalDAO;
+package kr.co.goc.anumal.animalService;
 
 import java.util.List;
 
+import kr.co.goc.anumal.animalDAO.AnimalDAOImpl;
 import kr.co.goc.anumal.animalVO.AnimalVO;
 import kr.co.goc.anumal.animalVO.ContentVO;
 
-public class AnimalDAOImpl implements IAnimalDAO{
-	private static AnimalDAOImpl animalDao;
+public class AnimalServiceImpl implements IAnimalService{
+	private AnimalDAOImpl animalDao;
+	
+	private static AnimalServiceImpl animalSer;
 
-	private AnimalDAOImpl() {
+	private AnimalServiceImpl() {
+		animalDao = AnimalDAOImpl.getInstance();
 	}
 
-	public static AnimalDAOImpl getInstance() {
-		if (animalDao == null) {
-			animalDao = new AnimalDAOImpl();
+	public static AnimalServiceImpl getInstance() {
+		if (animalSer == null) {
+			animalSer = new AnimalServiceImpl();
 		}
-		return animalDao;
+		return animalSer;
 	}
 
 	@Override
