@@ -1,6 +1,6 @@
-package kr.co.goc.anumal.animalController;
+package kr.co.goc.animal.animalController;
 
-import kr.co.goc.anumal.animalService.AnimalServiceImpl;
+import kr.co.goc.animal.animalService.AnimalServiceImpl;
 
 public class AniamlController {
 	private AnimalServiceImpl animalSer;

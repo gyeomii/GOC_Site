@@ -1,9 +1,9 @@
-package kr.co.goc.anumal.animalService;
+package kr.co.goc.animal.animalService;
 
 import java.util.List;
 
-import kr.co.goc.anumal.animalDAO.AnimalDAOImpl;
-import kr.co.goc.anumal.animalVO.AnimalVO;
+import kr.co.goc.animal.animalDAO.AnimalDAOImpl;
+import kr.co.goc.animal.animalVO.AnimalVO;
 
 public class AnimalServiceImpl implements IAnimalService{
 	private AnimalDAOImpl animalDao;

@@ -1,10 +1,10 @@
-package kr.co.goc.anumal.animalDAO;
+package kr.co.goc.animal.animalDAO;
 
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 
-import kr.co.goc.anumal.animalVO.AnimalVO;
+import kr.co.goc.animal.animalVO.AnimalVO;
 import kr.co.goc.util.MybatisUtil;
 
 public class AnimalDAOImpl implements IAnimalDAO{

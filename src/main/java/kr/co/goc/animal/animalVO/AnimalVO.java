@@ -1,4 +1,4 @@
-package kr.co.goc.anumal.animalVO;
+package kr.co.goc.animal.animalVO;
 
 public class AnimalVO {
 	private int userNum;

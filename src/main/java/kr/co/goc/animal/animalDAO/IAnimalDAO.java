@@ -1,8 +1,8 @@
-package kr.co.goc.anumal.animalDAO;
+package kr.co.goc.animal.animalDAO;
 
 import java.util.List;
 
-import kr.co.goc.anumal.animalVO.AnimalVO;
+import kr.co.goc.animal.animalVO.AnimalVO;
 
 public interface IAnimalDAO {
 	
