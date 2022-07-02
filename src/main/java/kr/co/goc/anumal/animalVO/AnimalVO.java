@@ -6,6 +6,8 @@ public class AnimalVO {
 	private String phoneNum;
 	private String nickname;
 	private String password;
+	private String agreement;
+	private String post;
 	
 	public int getUserNum() {
 		return userNum;
@@ -25,11 +27,11 @@ public class AnimalVO {
 	public void setPhoneNum(String phoneNum) {
 		this.phoneNum = phoneNum;
 	}
-	public String getNickName() {
+	public String getNickname() {
 		return nickname;
 	}
-	public void setNickName(String nickName) {
-		this.nickname = nickName;
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
 	}
 	public String getPassword() {
 		return password;
@@ -37,11 +39,21 @@ public class AnimalVO {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	public String getAgreement() {
+		return agreement;
+	}
+	public void setAgreement(String agreement) {
+		this.agreement = agreement;
+	}
+	public String getPost() {
+		return post;
+	}
+	public void setPost(String post) {
+		this.post = post;
+	}
 	@Override
 	public String toString() {
-		return "AnimalVO [userNum=" + userNum + ", userName=" + userName + ", phoneNum=" + phoneNum + ", nickName="
-				+ nickname + ", password=" + password + "]";
+		return "AnimalVO [userNum=" + userNum + ", userName=" + userName + ", phoneNum=" + phoneNum + ", nickname="
+				+ nickname + ", password=" + password + ", agreement=" + agreement + ", post=" + post + "]";
 	}
-	
-	
 }
