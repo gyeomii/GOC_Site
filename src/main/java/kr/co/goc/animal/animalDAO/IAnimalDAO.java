@@ -6,11 +6,11 @@ import kr.co.goc.animal.animalVO.AnimalVO;
 
 public interface IAnimalDAO {
 	
-	public int insertUserInfo(AnimalVO av);
-	public int updateUserInfo(AnimalVO av);
-	public int deleteUserInfo(String phoneNum, String password);
-	public List<AnimalVO> searchMyInfo(String phoneNum, String password);
+	public int insertUserInfo(AnimalVO vo);
+	public int updateUserInfo(AnimalVO vo);
+	public int deleteUserInfo(AnimalVO vo);
+	public List<AnimalVO> searchMyInfo(AnimalVO vo);
 	public List<AnimalVO> selectAllInfo();
-	public boolean phoneNumDuplCheck(String phoneNum);
-	public boolean nicknameDuplCheck(String nickname);
+	public int phoneNumDuplCheck(String phoneNum);
+	public int nicknameDuplCheck(String nickname);
 }

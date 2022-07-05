@@ -8,55 +8,57 @@ import kr.co.goc.animal.animalVO.AnimalVO;
 public class AnimalServiceImpl implements IAnimalService{
 	private AnimalDAOImpl animalDao;
 	
-	private static AnimalServiceImpl animalSer;
+	private static AnimalServiceImpl animalService;
 
 	private AnimalServiceImpl() {
 		animalDao = AnimalDAOImpl.getInstance();
 	}
 
 	public static AnimalServiceImpl getInstance() {
-		if (animalSer == null) {
-			animalSer = new AnimalServiceImpl();
+		if (animalService == null) {
+			animalService = new AnimalServiceImpl();
 		}
-		return animalSer;
+		return animalService;
 	}
 
 	@Override
-	public int insertUserInfo(AnimalVO av) {
-		int cnt = 0;
+	public int insertUserInfo(AnimalVO vo) {
+		int cnt = animalDao.insertUserInfo(vo);
 		return cnt;
 	}
 
 	@Override
-	public int updateUserInfo(AnimalVO av) {
-		int cnt = 0;
+	public int updateUserInfo(AnimalVO vo) {
+		int cnt = animalDao.updateUserInfo(vo);
+		return cnt;
+	}
+	@Override
+	public int deleteUserInfo(AnimalVO vo) {
+		int cnt = animalDao.deleteUserInfo(vo);
 		return cnt;
 	}
 
 	@Override
-	public int deleteUserInfo(String phoneNum, String password) {
-		int cnt = 0;
-		return cnt;
+	public List<AnimalVO> searchMyInfo(AnimalVO vo) {
+		List<AnimalVO> infoList = searchMyInfo(vo);
+		return infoList;
 	}
 
 	@Override
-	public List<AnimalVO> searchMyInfo(String phoneNum, String password) {
-		return null;
+	public int phoneNumDuplCheck(String phoneNum) {
+		int isExist = animalDao.phoneNumDuplCheck(phoneNum);
+		return isExist;
 	}
 
 	@Override
-	public boolean phoneNumDuplCheck(String phoneNum) {
-		return false;
-	}
-
-	@Override
-	public boolean nicknameDuplCheck(String nickname) {
-		return false;
+	public int nicknameDuplCheck(String nickname) {
+		int isExist = animalDao.nicknameDuplCheck(nickname);
+		return isExist;
 	}
 	
 	@Override
 	public List<AnimalVO> selectAllInfo() {
 		List<AnimalVO> infoList = animalDao.selectAllInfo();
-		return null;
+		return infoList;
 	}
 }

@@ -3,7 +3,6 @@ package kr.co.goc.util;
 import java.io.IOException;
 import java.io.Reader;
 import java.nio.charset.Charset;
-import java.nio.charset.StandardCharsets;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -19,7 +18,7 @@ public class MybatisUtil {
 //				1-1. xml문서 읽어오기
 //				설정 파일의 인코딩 설정(한글 처리를 위해서...)
 
-				Charset charset = StandardCharsets.UTF_8;
+				Charset charset = Charset.forName("UTF-8");
 				Resources.setCharset(charset);
 				Reader rd = Resources.getResourceAsReader("mybatis-config.xml");
 
